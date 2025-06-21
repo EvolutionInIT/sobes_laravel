@@ -13,7 +13,7 @@ class ApartmentController
     {
         //сколько запросов к бд сгенерирует этот код?
         //как его оптимизировать?
-        $apartments = Apartment::all();
+        $apartments = Apartment::get();
 
         foreach ($apartments as $apartment) {
             $apartment->owners;
