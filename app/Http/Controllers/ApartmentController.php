@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Apartment;
 
-class ApartmentController extends Controller
+class ApartmentController
 {
     /**
      * Display a listing of the apartments.
@@ -19,6 +19,6 @@ class ApartmentController extends Controller
             $apartment->owners;
         }
 
-        return response()->json($apartments);
+        return response()->json(['data' => $apartments]);
     }
 }
