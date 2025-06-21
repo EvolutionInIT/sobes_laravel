@@ -14,6 +14,7 @@ Route
     ->prefix("api")
     ->group(function () {
         Route::get('/apartments', [ApartmentController::class, 'apartments']);
+        Route::get('/apartment', [ApartmentController::class, 'apartment']);
     });
 
 
