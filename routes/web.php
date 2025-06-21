@@ -11,4 +11,9 @@ Route::get('/', function () {
 
 Route
     ::middleware('api')
-    ->get('/apartments', [ApartmentController::class, 'apartments']);
+    ->prefix("api")
+    ->group(function () {
+        Route::get('/apartments', [ApartmentController::class, 'apartments']);
+    });
+
+
