@@ -14,8 +14,7 @@ return new class extends Migration {
         //как можно оптимизировать данную миграции для этой таблицы
         //можно ли здесь отказываться от id автоинкремента
         Schema::create('users_apartments', function (Blueprint $table) {
-            //$table->id();
-            $table->primary(['user_id', 'apartment_id']);
+            $table->id();
             $table->unsignedInteger('user_id');
             $table->unsignedInteger('apartment_id');
             $table->timestamps();
