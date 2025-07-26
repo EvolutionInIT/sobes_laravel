@@ -8,7 +8,7 @@ const { apartments } = computed(() => store.apartments);
 
 watch(
     () => apartments,
-    (path) => {
+    (apartments) => {
         aps.value = apartments.value;
     },
     { immediate: true }
